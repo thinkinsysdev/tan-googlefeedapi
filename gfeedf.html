@@ -1,0 +1,27 @@
+<head>
+  <title>fiber-test</title>
+</head>
+
+<body>
+  This is a test!
+  {{> hello}}
+  {{> posts}}
+</body>
+
+<template name="hello">
+  <form>
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <span>
+  <input type="text" id="url" placeholder = "Enter a feed URL"/>
+  <input type="submit" value="Submit" />
+    <div id="results"> </div>
+  </span>
+  </form>
+</template>
+
+<template name="posts">
+  {{#each posts}}
+  <h2> {{title}}</h2>
+  {{/each}}
+</template>
